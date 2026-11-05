@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-05T08:40:37.783337" rpa="false" schemaversion="5">
+<suite id="s1" name="Tests" source="C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\tests">
+<suite id="s1-s1" name="Autenticar-Usuario" source="C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\tests\autenticar-usuario.robot">
+<test id="s1-s1-t1" name="Cenário 01 - Autenticar usuário com sucesso" line="10">
+<kw name="Given Usuário está na página de login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:38.139514" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
+<msg time="2026-11-05T08:40:38.290120" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-05T08:40:38.139306" elapsed="1.038543"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-05T08:40:39.178225" elapsed="0.023024"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:41.202319" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:39.201540" elapsed="2.000970"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:38.138629" elapsed="3.064051"/>
+</kw>
+<kw name="When Informa um email válido">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:41.203740" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<arg>id=emailLogin</arg>
+<arg>admin@bluestock.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:40:41.203399" elapsed="0.100473"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:43.305093" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:41.304146" elapsed="2.001098"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:41.203088" elapsed="2.102303"/>
+</kw>
+<kw name="And Informa uma senha válida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:43.306679" level="INFO">Typing text 'Admin@123' into text field 'id=senhaLogin'.</msg>
+<arg>id=senhaLogin</arg>
+<arg>Admin@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:40:43.306389" elapsed="0.046716"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:45.354187" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:43.353288" elapsed="2.001042"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:43.305968" elapsed="2.048476"/>
+</kw>
+<kw name="And Clica no botão entrar">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:45.355386" level="INFO">Clicking button 'btnEntrar'.</msg>
+<arg>btnEntrar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:40:45.355165" elapsed="0.406630"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:47.763058" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:45.762068" elapsed="2.001296"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:45.354870" elapsed="2.408722"/>
+</kw>
+<kw name="Then Deve ser redirecionado para a página inicial do sistema">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:47.777453" level="INFO">Current page contains text 'Consulta de produtos'.</msg>
+<arg>Consulta de produtos</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-05T08:40:47.764615" elapsed="0.012918"/>
+</kw>
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:47.785590" level="INFO">Current page contains text 'Pesquise, edite e exclua produtos cadastrados.'.</msg>
+<arg>Pesquise, edite e exclua produtos cadastrados.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-05T08:40:47.777670" elapsed="0.008005"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:47.887918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_sucesso.png"&gt;&lt;img src="evidencias/autenticacao_usuario_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/autenticacao_usuario_sucesso.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-05T08:40:47.785854" elapsed="0.102165"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-05T08:40:47.888157" elapsed="2.140040"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:47.764208" elapsed="2.264156"/>
+</kw>
+<doc>Validar autenticação com credenciais válidas</doc>
+<tag>login</tag>
+<tag>positivo</tag>
+<status status="PASS" start="2026-11-05T08:40:38.137645" elapsed="11.891127"/>
+</test>
+<test id="s1-s1-t2" name="Cenário 02 - Autenticar usuário com acesso negado" line="20">
+<kw name="Given Usuário está na página de login">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:50.031414" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
+<msg time="2026-11-05T08:40:50.114854" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
+<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2026-11-05T08:40:50.031156" elapsed="1.251192"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2026-11-05T08:40:51.282611" elapsed="0.021781"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:53.305286" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:51.304566" elapsed="2.000888"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:50.030341" elapsed="3.275245"/>
+</kw>
+<kw name="When Informa um email válido">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:53.306827" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<arg>id=emailLogin</arg>
+<arg>admin@bluestock.com</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:40:53.306458" elapsed="0.113825"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:55.421244" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:53.420465" elapsed="2.000978"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:53.306031" elapsed="2.115656"/>
+</kw>
+<kw name="And Informa uma senha inválida">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:55.423392" level="INFO">Typing text 'SenhaInvalida@123' into text field 'id=senhaLogin'.</msg>
+<arg>id=senhaLogin</arg>
+<arg>SenhaInvalida@123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:40:55.422948" elapsed="0.053210"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:57.477180" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:55.476366" elapsed="2.000923"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:55.422348" elapsed="2.055040"/>
+</kw>
+<kw name="And Clica no botão entrar">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:57.478100" level="INFO">Clicking button 'btnEntrar'.</msg>
+<arg>btnEntrar</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-05T08:40:57.477939" elapsed="0.047527"/>
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2026-11-05T08:40:59.526470" level="INFO">Slept 2 seconds.</msg>
+<arg>2s</arg>
+<doc>Pauses execution for the given time.</doc>
+<status status="PASS" start="2026-11-05T08:40:57.525700" elapsed="2.001013"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:57.477718" elapsed="2.049220"/>
+</kw>
+<kw name="Then Deve ser negado o acesso ao sistema">
+<kw name="Page Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:59.543014" level="INFO">Current page contains text 'E-mail ou senha inválidos.'.</msg>
+<arg>E-mail ou senha inválidos.</arg>
+<doc>Verifies that current page contains ``text``.</doc>
+<status status="PASS" start="2026-11-05T08:40:59.528388" elapsed="0.014713"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-05T08:40:59.696710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_negado.png"&gt;&lt;img src="evidencias/autenticacao_usuario_negado.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/autenticacao_usuario_negado.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-05T08:40:59.543264" elapsed="0.153542"/>
+</kw>
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2026-11-05T08:40:59.696996" elapsed="2.127719"/>
+</kw>
+<status status="PASS" start="2026-11-05T08:40:59.527676" elapsed="2.297178"/>
+</kw>
+<doc>Validar autenticação com senha incorreta</doc>
+<tag>login</tag>
+<tag>negativo</tag>
+<status status="PASS" start="2026-11-05T08:40:50.029426" elapsed="11.795718"/>
+</test>
+<doc>Testes de autenticação de usuários no sistema</doc>
+<status status="PASS" start="2026-11-05T08:40:37.817369" elapsed="24.008328"/>
+</suite>
+<status status="PASS" start="2026-11-05T08:40:37.784715" elapsed="24.041644"/>
+</suite>
+<statistics>
+<total>
+<stat pass="2" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+<stat pass="2" fail="0" skip="0">login</stat>
+<stat pass="1" fail="0" skip="0">negativo</stat>
+<stat pass="1" fail="0" skip="0">positivo</stat>
+</tag>
+<suite>
+<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
+<stat name="Autenticar-Usuario" id="s1-s1" pass="2" fail="0" skip="0">Tests.Autenticar-Usuario</stat>
+</suite>
+</statistics>
+<errors>
+<msg time="2026-11-05T08:40:38.290120" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2026-11-05T08:40:50.114854" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>
