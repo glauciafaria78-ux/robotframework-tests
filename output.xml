@@ -1,220 +1,263 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-05T08:40:37.783337" rpa="false" schemaversion="5">
-<suite id="s1" name="Tests" source="C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\tests">
-<suite id="s1-s1" name="Autenticar-Usuario" source="C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\tests\autenticar-usuario.robot">
-<test id="s1-s1-t1" name="Cenário 01 - Autenticar usuário com sucesso" line="10">
-<kw name="Given Usuário está na página de login">
+<robot generator="Robot 7.5.1 (Python 3.15.2 on win32)" generated="2026-11-10T08:45:56.645560" rpa="false" schemaversion="5">
+<suite id="s1" name="Consultar-Produtos" source="C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\tests\consultar-produtos.robot">
+<test id="s1-t1" name="Cenário 01 - Consultar produto com sucesso" line="14">
+<kw name="Given Usuário está autenticado no sistema">
+<kw name="Create Directory" owner="OperatingSystem">
+<msg time="2026-11-10T08:45:57.009037" level="INFO" html="true">Directory '&lt;a href="file://C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\evidencias"&gt;C:\Users\user\OneDrive\Desktop\COTI - AULAS\PROJETOS\robotframework-tests\evidencias&lt;/a&gt;' already exists.</msg>
+<arg>evidencias</arg>
+<doc>Creates the specified directory.</doc>
+<status status="PASS" start="2026-11-10T08:45:57.008782" elapsed="0.000322"/>
+</kw>
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:38.139514" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
-<msg time="2026-11-05T08:40:38.290120" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2026-11-10T08:45:57.009558" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
+<msg time="2026-11-10T08:45:57.159743" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.40); currently, chromedriver 157.0.8103.50 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
 <arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
 <arg>chrome</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-05T08:40:38.139306" elapsed="1.038543"/>
+<status status="PASS" start="2026-11-10T08:45:57.009401" elapsed="2.779385"/>
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-05T08:40:39.178225" elapsed="0.023024"/>
+<status status="PASS" start="2026-11-10T08:45:59.789020" elapsed="0.020929"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:41.202319" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:39.201540" elapsed="2.000970"/>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=emailLogin</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:45:59.810112" elapsed="0.018600"/>
 </kw>
-<status status="PASS" start="2026-11-05T08:40:38.138629" elapsed="3.064051"/>
-</kw>
-<kw name="When Informa um email válido">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:41.203740" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
+<msg time="2026-11-10T08:45:59.829159" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
 <arg>id=emailLogin</arg>
 <arg>admin@bluestock.com</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:40:41.203399" elapsed="0.100473"/>
+<status status="PASS" start="2026-11-10T08:45:59.828904" elapsed="0.075031"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:43.305093" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:41.304146" elapsed="2.001098"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:41.203088" elapsed="2.102303"/>
-</kw>
-<kw name="And Informa uma senha válida">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:43.306679" level="INFO">Typing text 'Admin@123' into text field 'id=senhaLogin'.</msg>
+<msg time="2026-11-10T08:45:59.904358" level="INFO">Typing text 'Admin@123' into text field 'id=senhaLogin'.</msg>
 <arg>id=senhaLogin</arg>
 <arg>Admin@123</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:40:43.306389" elapsed="0.046716"/>
+<status status="PASS" start="2026-11-10T08:45:59.904128" elapsed="0.056985"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:45.354187" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:43.353288" elapsed="2.001042"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:43.305968" elapsed="2.048476"/>
-</kw>
-<kw name="And Clica no botão entrar">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:45.355386" level="INFO">Clicking button 'btnEntrar'.</msg>
-<arg>btnEntrar</arg>
+<msg time="2026-11-10T08:45:59.961511" level="INFO">Clicking button 'id=btnEntrar'.</msg>
+<arg>id=btnEntrar</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:40:45.355165" elapsed="0.406630"/>
+<status status="PASS" start="2026-11-10T08:45:59.961290" elapsed="0.143619"/>
 </kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:47.763058" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:45.762068" elapsed="2.001296"/>
+<kw name="Wait Until Page Contains" owner="SeleniumLibrary">
+<arg>Consulta de produtos</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until ``text`` appears on the current page.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.105189" elapsed="0.008559"/>
 </kw>
-<status status="PASS" start="2026-11-05T08:40:45.354870" elapsed="2.408722"/>
+<status status="PASS" start="2026-11-10T08:45:57.008120" elapsed="3.105781"/>
 </kw>
-<kw name="Then Deve ser redirecionado para a página inicial do sistema">
+<kw name="When Cadastra um produto com código novo">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.115098" level="INFO">Opening url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/produto-form.html'</msg>
+<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/produto-form.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.114935" elapsed="0.063518"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=codigoProduto</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.178676" elapsed="0.013910"/>
+</kw>
+<kw name="Evaluate" owner="BuiltIn">
+<msg time="2026-11-10T08:46:00.194228" level="INFO">${CODIGO_PRODUTO} = PRD-C6BEE7394D48</msg>
+<var>${CODIGO_PRODUTO}</var>
+<arg>'PRD-' + __import__('uuid').uuid4().hex[:12].upper()</arg>
+<doc>Evaluates the given expression in Python and returns the result.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.192810" elapsed="0.001461"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2026-11-10T08:46:00.194749" level="INFO">${CODIGO_PRODUTO} = PRD-C6BEE7394D48</msg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Makes the variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.194434" elapsed="0.000353"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.195107" level="INFO">Typing text 'PRD-C6BEE7394D48' into text field 'id=codigoProduto'.</msg>
+<arg>id=codigoProduto</arg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.194902" elapsed="0.044219"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.239533" level="INFO">Typing text 'Produto Teste Consulta QA' into text field 'id=nomeProduto'.</msg>
+<arg>id=nomeProduto</arg>
+<arg>Produto Teste Consulta QA</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.239306" elapsed="0.051646"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.291359" level="INFO">Selecting options from selection list 'id=categoriaProduto' by label Informática.</msg>
+<arg>id=categoriaProduto</arg>
+<arg>Informática</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.291125" elapsed="0.068022"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.359550" level="INFO">Typing text '3500.00' into text field 'id=precoProduto'.</msg>
+<arg>id=precoProduto</arg>
+<arg>3500.00</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.359333" elapsed="0.042634"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.402381" level="INFO">Typing text '10' into text field 'id=estoqueProduto'.</msg>
+<arg>id=estoqueProduto</arg>
+<arg>10</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.402154" elapsed="0.042915"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.445458" level="INFO">Selecting options from selection list 'id=statusProduto' by label Ativo.</msg>
+<arg>id=statusProduto</arg>
+<arg>Ativo</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.445238" elapsed="0.040880"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.486523" level="INFO">Typing text 'Produto criado automaticamente para teste de consulta.' into text field 'id=descricaoProduto'.</msg>
+<arg>id=descricaoProduto</arg>
+<arg>Produto criado automaticamente para teste de consulta.</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.486298" elapsed="0.060153"/>
+</kw>
+<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.678562" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/consulta_produto_cadastro.png"&gt;&lt;img src="evidencias/consulta_produto_cadastro.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/consulta_produto_cadastro.png</arg>
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.546649" elapsed="0.132063"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.679258" level="INFO">Clicking button 'id=btnSalvarProduto'.</msg>
+<arg>id=btnSalvarProduto</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.678943" elapsed="0.051153"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=alertaFormularioProduto</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.730267" elapsed="0.011826"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.755502" level="INFO">Element 'id=alertaFormularioProduto' contains text 'Produto cadastrado com sucesso.'.</msg>
+<arg>id=alertaFormularioProduto</arg>
+<arg>Produto cadastrado com sucesso.</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.742264" elapsed="0.013336"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:46:00.114494" elapsed="0.641204"/>
+</kw>
+<kw name="And Acessa a página de consulta de produtos">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.756352" level="INFO">Opening url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/produtos.html'</msg>
+<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/produtos.html</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.756257" elapsed="0.024965"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=campoBuscaProduto</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.781494" elapsed="0.013210"/>
+</kw>
 <kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:47.777453" level="INFO">Current page contains text 'Consulta de produtos'.</msg>
+<msg time="2026-11-10T08:46:00.801934" level="INFO">Current page contains text 'Consulta de produtos'.</msg>
 <arg>Consulta de produtos</arg>
 <doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-05T08:40:47.764615" elapsed="0.012918"/>
+<status status="PASS" start="2026-11-10T08:46:00.794906" elapsed="0.007144"/>
 </kw>
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:47.785590" level="INFO">Current page contains text 'Pesquise, edite e exclua produtos cadastrados.'.</msg>
-<arg>Pesquise, edite e exclua produtos cadastrados.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-05T08:40:47.777670" elapsed="0.008005"/>
+<status status="PASS" start="2026-11-10T08:46:00.756018" elapsed="0.046115"/>
+</kw>
+<kw name="And Pesquisa o produto pelo código cadastrado">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.803073" level="INFO">Typing text 'PRD-C6BEE7394D48' into text field 'id=campoBuscaProduto'.</msg>
+<arg>id=campoBuscaProduto</arg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.802845" elapsed="0.055197"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>id=linhaProduto-1</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.858224" elapsed="0.012406"/>
+</kw>
+<status status="PASS" start="2026-11-10T08:46:00.802466" elapsed="0.068268"/>
+</kw>
+<kw name="Then Deve visualizar o produto cadastrado na pesquisa">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.882911" level="INFO">Element 'id=produtoCodigo-1' contains text 'PRD-C6BEE7394D48'.</msg>
+<arg>id=produtoCodigo-1</arg>
+<arg>${CODIGO_PRODUTO}</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.871326" elapsed="0.011966"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.895662" level="INFO">Element 'id=produtoNome-1' contains text 'Produto Teste Consulta QA'.</msg>
+<arg>id=produtoNome-1</arg>
+<arg>Produto Teste Consulta QA</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.883552" elapsed="0.012196"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.908057" level="INFO">Element 'id=produtoCategoria-1' contains text 'Informática'.</msg>
+<arg>id=produtoCategoria-1</arg>
+<arg>Informática</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.895894" elapsed="0.012248"/>
+</kw>
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2026-11-10T08:46:00.921328" level="INFO">Element 'id=produtoStatus-1' contains text 'Ativo'.</msg>
+<arg>id=produtoStatus-1</arg>
+<arg>Ativo</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2026-11-10T08:46:00.908288" elapsed="0.013127"/>
 </kw>
 <kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:47.887918" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_sucesso.png"&gt;&lt;img src="evidencias/autenticacao_usuario_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>evidencias/autenticacao_usuario_sucesso.png</arg>
+<msg time="2026-11-10T08:46:01.042904" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/consulta_produto_sucesso.png"&gt;&lt;img src="evidencias/consulta_produto_sucesso.png" width="800px"&gt;&lt;/a&gt;</msg>
+<arg>evidencias/consulta_produto_sucesso.png</arg>
 <doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-11-05T08:40:47.785854" elapsed="0.102165"/>
+<status status="PASS" start="2026-11-10T08:46:00.921606" elapsed="0.121386"/>
 </kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-05T08:40:47.888157" elapsed="2.140040"/>
+<status status="PASS" start="2026-11-10T08:46:00.871055" elapsed="0.172021"/>
 </kw>
-<status status="PASS" start="2026-11-05T08:40:47.764208" elapsed="2.264156"/>
+<kw name="Close All Browsers" owner="SeleniumLibrary" type="TEARDOWN">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2026-11-10T08:46:01.043582" elapsed="2.112841"/>
 </kw>
-<doc>Validar autenticação com credenciais válidas</doc>
-<tag>login</tag>
+<doc>Validar cadastro e consulta de produto utilizando seu código</doc>
+<tag>consulta</tag>
 <tag>positivo</tag>
-<status status="PASS" start="2026-11-05T08:40:38.137645" elapsed="11.891127"/>
+<tag>produto</tag>
+<status status="PASS" start="2026-11-10T08:45:57.007323" elapsed="6.149525"/>
 </test>
-<test id="s1-s1-t2" name="Cenário 02 - Autenticar usuário com acesso negado" line="20">
-<kw name="Given Usuário está na página de login">
-<kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:50.031414" level="INFO">Opening browser 'chrome' to base url 'https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html'.</msg>
-<msg time="2026-11-05T08:40:50.114854" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
-<arg>https://sergiocotiazure20265-ops.github.io/produtos-cypress-site/index.html</arg>
-<arg>chrome</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2026-11-05T08:40:50.031156" elapsed="1.251192"/>
-</kw>
-<kw name="Maximize Browser Window" owner="SeleniumLibrary">
-<doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2026-11-05T08:40:51.282611" elapsed="0.021781"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:53.305286" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:51.304566" elapsed="2.000888"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:50.030341" elapsed="3.275245"/>
-</kw>
-<kw name="When Informa um email válido">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:53.306827" level="INFO">Typing text 'admin@bluestock.com' into text field 'id=emailLogin'.</msg>
-<arg>id=emailLogin</arg>
-<arg>admin@bluestock.com</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:40:53.306458" elapsed="0.113825"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:55.421244" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:53.420465" elapsed="2.000978"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:53.306031" elapsed="2.115656"/>
-</kw>
-<kw name="And Informa uma senha inválida">
-<kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:55.423392" level="INFO">Typing text 'SenhaInvalida@123' into text field 'id=senhaLogin'.</msg>
-<arg>id=senhaLogin</arg>
-<arg>SenhaInvalida@123</arg>
-<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:40:55.422948" elapsed="0.053210"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:57.477180" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:55.476366" elapsed="2.000923"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:55.422348" elapsed="2.055040"/>
-</kw>
-<kw name="And Clica no botão entrar">
-<kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:57.478100" level="INFO">Clicking button 'btnEntrar'.</msg>
-<arg>btnEntrar</arg>
-<doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2026-11-05T08:40:57.477939" elapsed="0.047527"/>
-</kw>
-<kw name="Sleep" owner="BuiltIn">
-<msg time="2026-11-05T08:40:59.526470" level="INFO">Slept 2 seconds.</msg>
-<arg>2s</arg>
-<doc>Pauses execution for the given time.</doc>
-<status status="PASS" start="2026-11-05T08:40:57.525700" elapsed="2.001013"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:57.477718" elapsed="2.049220"/>
-</kw>
-<kw name="Then Deve ser negado o acesso ao sistema">
-<kw name="Page Should Contain" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:59.543014" level="INFO">Current page contains text 'E-mail ou senha inválidos.'.</msg>
-<arg>E-mail ou senha inválidos.</arg>
-<doc>Verifies that current page contains ``text``.</doc>
-<status status="PASS" start="2026-11-05T08:40:59.528388" elapsed="0.014713"/>
-</kw>
-<kw name="Capture Page Screenshot" owner="SeleniumLibrary">
-<msg time="2026-11-05T08:40:59.696710" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="evidencias/autenticacao_usuario_negado.png"&gt;&lt;img src="evidencias/autenticacao_usuario_negado.png" width="800px"&gt;&lt;/a&gt;</msg>
-<arg>evidencias/autenticacao_usuario_negado.png</arg>
-<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
-<status status="PASS" start="2026-11-05T08:40:59.543264" elapsed="0.153542"/>
-</kw>
-<kw name="Close Browser" owner="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" start="2026-11-05T08:40:59.696996" elapsed="2.127719"/>
-</kw>
-<status status="PASS" start="2026-11-05T08:40:59.527676" elapsed="2.297178"/>
-</kw>
-<doc>Validar autenticação com senha incorreta</doc>
-<tag>login</tag>
-<tag>negativo</tag>
-<status status="PASS" start="2026-11-05T08:40:50.029426" elapsed="11.795718"/>
-</test>
-<doc>Testes de autenticação de usuários no sistema</doc>
-<status status="PASS" start="2026-11-05T08:40:37.817369" elapsed="24.008328"/>
-</suite>
-<status status="PASS" start="2026-11-05T08:40:37.784715" elapsed="24.041644"/>
+<doc>Teste de consulta de produtos cadastrados</doc>
+<status status="PASS" start="2026-11-10T08:45:56.647106" elapsed="6.511292"/>
 </suite>
 <statistics>
 <total>
-<stat pass="2" fail="0" skip="0">All Tests</stat>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
 </total>
 <tag>
-<stat pass="2" fail="0" skip="0">login</stat>
-<stat pass="1" fail="0" skip="0">negativo</stat>
+<stat pass="1" fail="0" skip="0">consulta</stat>
 <stat pass="1" fail="0" skip="0">positivo</stat>
+<stat pass="1" fail="0" skip="0">produto</stat>
 </tag>
 <suite>
-<stat name="Tests" id="s1" pass="2" fail="0" skip="0">Tests</stat>
-<stat name="Autenticar-Usuario" id="s1-s1" pass="2" fail="0" skip="0">Tests.Autenticar-Usuario</stat>
+<stat name="Consultar-Produtos" id="s1" pass="1" fail="0" skip="0">Consultar-Produtos</stat>
 </suite>
 </statistics>
 <errors>
-<msg time="2026-11-05T08:40:38.290120" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2026-11-05T08:40:50.114854" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.38); currently, chromedriver 157.0.8103.38 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2026-11-10T08:45:57.159743" level="WARN">The chromedriver version (156.0.8078.80) detected in PATH at C:\Chrome\chromedriver-win64\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (157.0.8103.40); currently, chromedriver 157.0.8103.50 is recommended for chrome 157.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
